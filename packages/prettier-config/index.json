@@ -17,5 +17,14 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+  "overrides": [
+    {
+      "files": ".changeset/**/*.md",
+      "excludeFiles": "README.md",
+      "options": {
+        "proseWrap": "never"
+      }
+    }
+  ]
 }
