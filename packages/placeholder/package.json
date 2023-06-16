@@ -1,0 +1,19 @@
+{
+  "name": "@aejay/placeholder",
+  "version": "1.0.0",
+  "description": "Just a dummy package to fill in until there's a real one to publish!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aejay/aejay-rs.git"
+  },
+  "author": "Aejay Goehring",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aejay/aejay-rs/issues"
+  },
+  "homepage": "https://github.com/aejay/aejay-rs#readme"
+}
