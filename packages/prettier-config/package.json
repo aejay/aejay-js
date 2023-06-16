@@ -1,0 +1,22 @@
+{
+  "name": "@aejay/prettier-config",
+  "version": "0.0.1",
+  "description": "A config for prettier with Aejay's ever-changing opinions!",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aejay/aejay-js.git"
+  },
+  "keywords": [
+    "config",
+    "prettier",
+    "lint"
+  ],
+  "author": "Aejay Goehring",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aejay/aejay-js/issues"
+  },
+  "homepage": "https://github.com/aejay/aejay-js/tree/main/packages/prettier-config#readme",
+  "prettier": "./index.json"
+}

@@ -5,13 +5,19 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "release": "npm run build --workspaces --if-present && changeset publish"
+    "lint": "lint-staged",
+    "release": "npm run build --workspaces --if-present && changeset publish",
+    "prepare": "husky install"
   },
   "workspaces": [
     "./packages/*"
   ],
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.1"
-  }
+    "@changesets/cli": "^2.26.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8"
+  },
+  "prettier": "@aejay/prettier-config"
 }
