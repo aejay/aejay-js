@@ -12,9 +12,9 @@ this involves.
 If you somehow happen to share my exact opinions, you should be able to use this
 config by specifying this in your package.json:
 
-```json
+```jsonc
 {
-  // ...
+  // ... the rest of your package config
   "prettier": "@aejay/prettier-config"
 }
 ```
