@@ -1,6 +1,6 @@
 {
   "name": "@aejay/prettier-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A config for prettier with Aejay's ever-changing opinions!",
   "main": "index.json",
   "repository": {
