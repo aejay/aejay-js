@@ -20,7 +20,7 @@
   "vueIndentScriptAndStyle": true,
   "overrides": [
     {
-      "files": ".changeset/**/*.md",
+      "files": [".changeset/**/*.md", "CHANGELOG.md"],
       "excludeFiles": "README.md",
       "options": {
         "proseWrap": "never"
