@@ -1,5 +1,14 @@
 # @aejay/prettier-config
 
+## 1.1.0
+
+### Minor Changes
+
+- [#5](https://github.com/aejay/aejay-js/pull/5)
+  [`f60cc5b`](https://github.com/aejay/aejay-js/commit/f60cc5bdbd9524a7364de19cee3618e1ff0f921a)
+  Thanks [@aejay](https://github.com/aejay)! - Override the prose behavior for
+  changesets to play nicer with github.
+
 ## 1.0.0
 
 ### Major Changes
