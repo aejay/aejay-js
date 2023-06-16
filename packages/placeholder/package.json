@@ -4,7 +4,6 @@
   "description": "Just a dummy package to fill in until there's a real one to publish!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

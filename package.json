@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present"
+    "test": "npm run test --workspaces --if-present",
+    "release": "npm run build --workspaces --if-present && changeset publish"
   },
   "workspaces": [
     "./packages/*"
