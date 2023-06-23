@@ -1,0 +1,32 @@
+{
+  "name": "@aejay/eslint-config",
+  "version": "0.0.0",
+  "description": "A config for eslint with Aejay's ever-changing opinions!",
+  "main": "ts-prettier.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aejay/aejay-js.git",
+    "directory": "packages/eslint-config"
+  },
+  "keywords": [
+    "config",
+    "eslint",
+    "eslintconfig",
+    "lint"
+  ],
+  "author": "Aejay Goehring",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aejay/aejay-js/issues"
+  },
+  "homepage": "https://github.com/aejay/aejay-js/tree/main/packages/eslint-config#readme",
+  "prettier": "../prettier-config/index.json",
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "eslint-config-prettier": ">= 8",
+    "eslint-config-react-app": ">= 6",
+    "@typescript-eslint/parser": ">= 5",
+    "@typescript-eslint/eslint-plugin": ">= 5",
+    "typescript": ">= 5"
+  }
+}
