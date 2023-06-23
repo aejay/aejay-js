@@ -1,6 +1,6 @@
 {
   "name": "@aejay/eslint-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A config for eslint with Aejay's ever-changing opinions!",
   "main": "ts-prettier.js",
   "repository": {
