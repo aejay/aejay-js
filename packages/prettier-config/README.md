@@ -1,6 +1,6 @@
 # @aejay/prettier-config
 
-A [prettier](https://prettier.io/) config with Aejay's current opinion's baked
+A [prettier](https://prettier.io/) config with Aejay's current opinions baked
 in. These will probably change over time, so please don't judge me too harshly
 for them!
 
