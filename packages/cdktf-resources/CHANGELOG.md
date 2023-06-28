@@ -1,5 +1,14 @@
 # @aejay/cdktf-resources
 
+## 1.2.0
+
+### Minor Changes
+
+- [#15](https://github.com/aejay/aejay-js/pull/15)
+  [`0c029f1`](https://github.com/aejay/aejay-js/commit/0c029f1a8eb05caf9502d15abf8473a266ad0328)
+  Thanks [@aejay](https://github.com/aejay)! - Switching away from ESM because
+  it's unsupported for cdktf.
+
 ## 1.1.0
 
 ### Minor Changes
