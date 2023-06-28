@@ -77,6 +77,9 @@ export default class SinglePageApp extends Construct {
             return request;
           }
         `,
+        lifecycle: {
+          createBeforeDestroy: true,
+        },
       },
     );
 
