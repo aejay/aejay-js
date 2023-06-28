@@ -1,13 +1,23 @@
 import * as aws from "@cdktf/provider-aws";
+import { Fn, TerraformIterator } from "cdktf";
 import { Construct } from "constructs";
 
-interface BucketDistributionOptions {
+/**
+ * Options for configuring an instance of {@link BucketDistribution}.
+ */
+export interface BucketDistributionOptions {
+  /** The ID of the S3 bucket you want served by CloudFront. */
   bucketId: string;
+  /** The regional domain of the S3 bucket you want served by CloudFront. */
   bucketDomain: string;
 
-  certificateArn?: string;
-  domainAliases?: string[];
-  r53zoneId?: string;
+  /** The ARN of the ACM certificate the distribution should use for TLS. */
+  certificateArn: string;
+  /** A list of domains that the distribution will be served from.  */
+  domainAliases: string[];
+  /** The ID of the Route53 hosted zone to create DNS records in for each domain. */
+  r53zoneId: string;
+  /** The ARN of a function for processing incoming viewer requests, if any. */
   viewerRequestFunctionArn?: string;
 }
 
@@ -18,6 +28,12 @@ interface BucketDistributionOptions {
 export default class BucketDistribution extends Construct {
   distribution: aws.cloudfrontDistribution.CloudfrontDistribution;
 
+  /**
+   *
+   * @param scope The construct (resource or app) that contains this instance.
+   * @param id The ID of this instance, which should be unique to the scope.
+   * @param options The options for configuring this instance.
+   */
   constructor(
     scope: Construct,
     id: string,
@@ -138,21 +154,20 @@ export default class BucketDistribution extends Construct {
       policy: document.json,
     });
 
-    if (r53zoneId && domainAliases) {
-      domainAliases.map(
-        (alias) =>
-          new aws.route53Record.Route53Record(this, `route-${alias}`, {
-            zoneId: r53zoneId,
-            name: alias,
-            type: "A",
+    const domainIterator = TerraformIterator.fromList(Fn.toset(domainAliases));
 
-            alias: {
-              name: this.distribution.domainName,
-              zoneId: this.distribution.hostedZoneId,
-              evaluateTargetHealth: false,
-            },
-          }),
-      );
-    }
+    new aws.route53Record.Route53Record(this, `route`, {
+      forEach: domainIterator,
+
+      zoneId: r53zoneId,
+      name: domainIterator.value,
+      type: "A",
+
+      alias: {
+        name: this.distribution.domainName,
+        zoneId: this.distribution.hostedZoneId,
+        evaluateTargetHealth: false,
+      },
+    });
   }
 }

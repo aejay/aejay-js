@@ -8,7 +8,11 @@ import {
   TerraformLocal,
 } from "cdktf";
 
-interface DirectoryBucketOptions {
+/**
+ * Options for configuring an instance of {@link DirectoryBucket}.
+ */
+export interface DirectoryBucketOptions {
+  /** The path to the local directory that should be uploaded to S3. */
   localPath: string;
 }
 
@@ -20,6 +24,12 @@ interface DirectoryBucketOptions {
 export default class DirectoryBucket extends Construct {
   bucket: aws.s3Bucket.S3Bucket;
 
+  /**
+   *
+   * @param scope The construct (resource or app) that contains this instance.
+   * @param id The ID of this instance, which should be unique to the scope.
+   * @param options The options for configuring this instance.
+   */
   constructor(scope: Construct, id: string, options: DirectoryBucketOptions) {
     super(scope, id);
 
