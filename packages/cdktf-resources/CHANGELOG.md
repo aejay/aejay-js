@@ -1,5 +1,14 @@
 # @aejay/cdktf-resources
 
+## 1.2.1
+
+### Patch Changes
+
+- [#17](https://github.com/aejay/aejay-js/pull/17)
+  [`8bd2cab`](https://github.com/aejay/aejay-js/commit/8bd2cab68b065016ff79cce487032c75a4dd6765)
+  Thanks [@aejay](https://github.com/aejay)! - Setting CF function to create
+  before destroy.
+
 ## 1.2.0
 
 ### Minor Changes
