@@ -1,6 +1,6 @@
 {
   "name": "@aejay/cdktf-resources",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Terraform CDK resources I find myself needing on projects and would like to reuse.",
   "main": "dist/index.js",
   "type": "module",
