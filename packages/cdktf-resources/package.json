@@ -28,6 +28,7 @@
   "peerDependencies": {
     "@cdktf/provider-aws": ">= 14",
     "@cdktf/provider-local": ">= 6",
+    "@cdktf/provider-random": ">= 8",
     "cdktf": ">= 0.16",
     "constructs": ">= 10"
   },
