@@ -20,7 +20,6 @@
     "url": "https://github.com/aejay/aejay-js/issues"
   },
   "homepage": "https://github.com/aejay/aejay-js/tree/main/packages/eslint-config#readme",
-  "prettier": "../prettier-config/index.json",
   "peerDependencies": {
     "eslint": ">= 8",
     "eslint-config-prettier": ">= 8",

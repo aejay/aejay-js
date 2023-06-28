@@ -18,6 +18,5 @@
   "bugs": {
     "url": "https://github.com/aejay/aejay-js/issues"
   },
-  "homepage": "https://github.com/aejay/aejay-js/tree/main/packages/prettier-config#readme",
-  "prettier": "./index.json"
+  "homepage": "https://github.com/aejay/aejay-js/tree/main/packages/prettier-config#readme"
 }

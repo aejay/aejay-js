@@ -19,5 +19,5 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   },
-  "prettier": "@aejay/prettier-config"
+  "prettier": "./packages/prettier-config/index.json"
 }
