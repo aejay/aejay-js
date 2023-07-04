@@ -1,4 +1,5 @@
 import * as aws from "@cdktf/provider-aws";
+import * as random from "@cdktf/provider-random";
 import { Fn, TerraformIterator } from "cdktf";
 import { Construct } from "constructs";
 
@@ -52,12 +53,17 @@ export default class BucketDistribution extends Construct {
 
     const originId = "s3Origin";
 
+    const controlId = new random.id.Id(this, `access-control-id`, {
+      byteLength: 6,
+      prefix: "access-control-",
+    });
+
     const accessControl =
       new aws.cloudfrontOriginAccessControl.CloudfrontOriginAccessControl(
         this,
         "access-control",
         {
-          name: `${this.node.id}-access-control`,
+          name: controlId.b64Url,
           originAccessControlOriginType: "s3",
           signingBehavior: "always",
           signingProtocol: "sigv4",
@@ -72,7 +78,7 @@ export default class BucketDistribution extends Construct {
       {
         enabled: true,
         isIpv6Enabled: true,
-        comment: "Distribution for the aejay.com portfolio site",
+        comment: `Distribution for the ${bucketId} bucket`,
         aliases: domainAliases,
         origin: [
           {
