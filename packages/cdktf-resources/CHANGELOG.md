@@ -1,5 +1,14 @@
 # @aejay/cdktf-resources
 
+## 1.3.0
+
+### Minor Changes
+
+- [#19](https://github.com/aejay/aejay-js/pull/19)
+  [`9749141`](https://github.com/aejay/aejay-js/commit/9749141cace32de511202ca2b75bcdb23daf5f76)
+  Thanks [@aejay](https://github.com/aejay)! - Use unique names for
+  BucketDistribution access controls.
+
 ## 1.2.1
 
 ### Patch Changes
